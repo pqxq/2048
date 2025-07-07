@@ -286,6 +286,13 @@ int main(void)
 
     InitWindow(450, 800, "2048");
 
+    SearchAndSetResourceDir("resources");
+    Image icon = LoadImage("2048.png");
+    SetWindowIcon(icon);
+    UnloadImage(icon);
+
+    SetWindowTitle("2048");
+
     init();
 
     while (!WindowShouldClose())
